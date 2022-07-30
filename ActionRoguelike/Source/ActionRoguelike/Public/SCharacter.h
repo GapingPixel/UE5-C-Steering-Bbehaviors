@@ -14,6 +14,10 @@ UCLASS()
 class ACTIONROGUELIKE_API ASCharacter : public ACharacter
 {
 	GENERATED_BODY()
+protected:
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ProjectileClass;
 
 public:
 	// Sets default values for this character's properties
@@ -33,9 +37,8 @@ protected:
 	void MoveRight(float value);
 	void BeginCrouch();
 	void EndCrouch();
+	void PrimaryAttack();
 	//void RotateJaw(float value);
-
-	
 
 public:	
 	// Called every frame
